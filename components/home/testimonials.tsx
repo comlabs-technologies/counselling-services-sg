@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/site/reveal";
 import { testimonials } from "@/lib/site";
-import { sectionX } from "@/lib/styles";
+import { sectionInner, sectionX } from "@/lib/styles";
 
 const featured = testimonials.find((item) => item.featured)!;
 const supporting = testimonials.filter((item) => !item.featured);
@@ -11,7 +11,7 @@ export function Testimonials() {
       aria-labelledby="testimonials-heading"
       className="bg-[#35352F] text-[#F0EBE2]"
     >
-      <div className={`${sectionX} mx-auto max-w-[980px] py-20 md:py-24`}>
+      <div className={`${sectionX} ${sectionInner} py-20 md:py-24`}>
         <Reveal>
           <h2
             id="testimonials-heading"

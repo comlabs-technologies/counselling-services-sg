@@ -4,16 +4,16 @@ import { Clock3 } from "lucide-react";
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
 import { locations } from "@/lib/site";
-import { h2Class, sectionX, sectionY } from "@/lib/styles";
+import { h2Class, sectionInner, sectionX, sectionY } from "@/lib/styles";
 
 export function Locations() {
   return (
     <section
       id="locations"
       aria-labelledby="locations-heading"
-      className="scroll-mt-24 bg-[#DED8CD]"
+      className={`scroll-mt-24 bg-[#DED8CD] ${sectionX} ${sectionY}`}
     >
-      <div className={`${sectionX} ${sectionY} mx-auto max-w-[1180px]`}>
+      <div className={sectionInner}>
         <Reveal className="grid items-end gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <Eyebrow>Choose a calm space</Eyebrow>
@@ -26,7 +26,7 @@ export function Locations() {
             alt="Map showing The Ember Practice’s two central Singapore locations"
             width={1400}
             height={900}
-            className="h-[180px] w-full object-cover object-center md:h-[220px]"
+            className="h-[220px] w-full object-cover object-center md:h-[280px]"
           />
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -38,7 +38,7 @@ export function Locations() {
                   alt={`${location.name} in Singapore`}
                   width={512}
                   height={512}
-                  className="h-[220px] w-full object-cover"
+                  className="h-[280px] w-full object-cover md:h-[320px]"
                 />
                 <div className="flex flex-1 flex-col p-7">
                   <h3 className="m-0 font-serif text-[28px] font-normal text-[#272620]">

@@ -1,12 +1,12 @@
 import { EMAIL, PHONE_DISPLAY, PHONE_TEL, socialLinks, WHATSAPP_DISPLAY, WHATSAPP_URL } from "@/lib/site";
-import { sectionX } from "@/lib/styles";
+import { sectionInner, sectionX } from "@/lib/styles";
 
 import { Logo } from "./logo";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[#C9C4B9] bg-[#F7F5EF] pb-24 md:pb-0">
-      <div className={`${sectionX} mx-auto grid max-w-[1180px] gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]`}>
+    <footer className={`border-t border-[#C9C4B9] bg-[#F7F5EF] pb-24 md:pb-0 ${sectionX}`}>
+      <div className={`${sectionInner} grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr]`}>
         <div>
           <Logo href="/" />
           <p className="mt-6 mb-0 font-serif text-[22px] text-[#272620]">
@@ -47,7 +47,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className={`${sectionX} mx-auto flex max-w-[1180px] flex-col gap-3 border-t border-[#C9C4B9] py-6 text-[13px] text-[#6E6A62] md:flex-row md:items-center md:justify-between`}>
+      <div className={`${sectionInner} flex flex-col gap-3 border-t border-[#C9C4B9] py-6 text-[13px] text-[#6E6A62] md:flex-row md:items-center md:justify-between`}>
         <p className="m-0">© 2026 The Ember Practice Pte Ltd</p>
         <p className="m-0">
           <a href="/privacy-policy" className="text-inherit no-underline hover:text-[#9D4936]">
@@ -57,7 +57,7 @@ export function SiteFooter() {
           Not a crisis service
         </p>
       </div>
-      <p className={`${sectionX} mx-auto max-w-[1180px] pb-8 text-[13px] leading-[1.6] text-[#6E6A62]`}>
+      <p className={`${sectionInner} pb-8 text-[13px] leading-[1.6] text-[#6E6A62]`}>
         If you are in immediate danger, please seek local emergency help. This
         practice is not an emergency or crisis service.
       </p>

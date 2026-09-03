@@ -1,7 +1,7 @@
 import { PathwayList } from "@/components/site/pathway-list";
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
-import { bodyClass, h2Class, sectionX, sectionY } from "@/lib/styles";
+import { bodyClass, h2Class, sectionInner, sectionX, sectionY } from "@/lib/styles";
 
 export function Pathway() {
   return (
@@ -10,7 +10,7 @@ export function Pathway() {
       aria-labelledby="pathway-heading"
       className={`${sectionX} ${sectionY}`}
     >
-      <div className="mx-auto max-w-[1180px]">
+      <div className={sectionInner}>
         <Reveal className="max-w-[40rem]">
           <Eyebrow>Start with what feels closest</Eyebrow>
           <h2 id="pathway-heading" className={`${h2Class} mt-5`}>

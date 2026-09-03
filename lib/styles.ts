@@ -1,7 +1,9 @@
 export const sectionX =
-  "px-[max(20px,calc((100vw-1120px)/2))] max-[900px]:px-5";
+  "px-[max(20px,calc((100vw-1180px)/2))] max-[900px]:px-5";
 
 export const sectionY = "py-[104px] max-[900px]:py-[72px]";
+
+export const sectionInner = "mx-auto w-full max-w-[1180px]";
 
 export const h2Class =
   "m-0 max-w-[18ch] font-serif text-[clamp(2.5rem,4.8vw,4rem)] font-normal leading-[1.12] tracking-[-0.035em] text-[#272620]";
