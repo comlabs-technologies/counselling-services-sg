@@ -4,12 +4,12 @@ import { CTA } from "@/components/site/cta";
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
 import { credentials, whoSheetalSupports } from "@/lib/site";
-import { bodyClass, h2Class, sectionX, sectionY } from "@/lib/styles";
+import { bodyClass, h2Class, sectionInner, sectionX, sectionY } from "@/lib/styles";
 
 export function MeetSheetal() {
   return (
-    <section id="sheetal" aria-labelledby="sheetal-heading" className="scroll-mt-24">
-      <div className={`${sectionX} ${sectionY} mx-auto grid max-w-[1180px] items-start gap-12 lg:grid-cols-[0.86fr_1.14fr]`}>
+    <section id="sheetal" aria-labelledby="sheetal-heading" className={`scroll-mt-24 ${sectionX} ${sectionY}`}>
+      <div className={`${sectionInner} grid items-start gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-14`}>
         <Reveal className="lg:sticky lg:top-28">
           <div className="relative overflow-hidden bg-[#DED8CD]">
             <Image
@@ -17,7 +17,7 @@ export function MeetSheetal() {
               alt="Portrait of Sheetal Singhania, counsellor at The Ember Practice"
               width={941}
               height={1672}
-              className="h-[520px] w-full object-cover object-[center_12%] md:h-[640px] lg:h-[720px]"
+              className="h-[560px] w-full object-cover object-[center_12%] md:h-[680px] lg:h-[760px]"
             />
           </div>
         </Reveal>

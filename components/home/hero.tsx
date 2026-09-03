@@ -5,12 +5,12 @@ import { CTA } from "@/components/site/cta";
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
 import { trustRail } from "@/lib/site";
-import { sectionX } from "@/lib/styles";
+import { sectionInner, sectionX } from "@/lib/styles";
 
 export function Hero() {
   return (
     <section aria-labelledby="hero-heading" className={`${sectionX} pb-6 pt-10 md:pt-16`}>
-      <div className="mx-auto grid max-w-[1180px] items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16">
+      <div className={`${sectionInner} grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16`}>
         <Reveal>
           <Eyebrow>Therapy & counselling · Singapore</Eyebrow>
           <h1
@@ -58,7 +58,7 @@ export function Hero() {
           </div>
         </Reveal>
       </div>
-      <ul className="mx-auto mt-10 mb-0 grid max-w-[1180px] list-none grid-cols-1 border-y border-[#C9C4B9] p-0 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className={`${sectionInner} mt-10 mb-0 grid list-none grid-cols-1 border-y border-[#C9C4B9] p-0 sm:grid-cols-2 lg:grid-cols-4`}>
         {trustRail.map((item) => (
           <li
             key={item}

@@ -1,12 +1,12 @@
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
 import { firstSessionSteps } from "@/lib/site";
-import { bodyClass, h2Class, sectionX, sectionY } from "@/lib/styles";
+import { bodyClass, h2Class, sectionInner, sectionX, sectionY } from "@/lib/styles";
 
 export function FirstSession() {
   return (
-    <section aria-labelledby="session-heading">
-      <div className={`${sectionX} ${sectionY} mx-auto grid max-w-[1180px] gap-12 lg:grid-cols-[0.85fr_1.15fr]`}>
+    <section aria-labelledby="session-heading" className={`${sectionX} ${sectionY}`}>
+      <div className={`${sectionInner} grid gap-12 lg:grid-cols-[0.85fr_1.15fr]`}>
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <Eyebrow>A simple, comfortable beginning</Eyebrow>
           <h2 id="session-heading" className={`${h2Class} mt-5`}>

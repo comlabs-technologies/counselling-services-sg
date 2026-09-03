@@ -2,12 +2,12 @@ import { CTA } from "@/components/site/cta";
 import { Eyebrow } from "@/components/site/eyebrow";
 import { Reveal } from "@/components/site/reveal";
 import { corporateWellness, primaryServices, secondaryServices } from "@/lib/site";
-import { bodyClass, h2Class, sectionX, sectionY } from "@/lib/styles";
+import { bodyClass, h2Class, sectionInner, sectionX, sectionY } from "@/lib/styles";
 
 export function Services() {
   return (
-    <section aria-labelledby="services-heading" className="bg-[#DED8CD]">
-      <div className={`${sectionX} ${sectionY} mx-auto max-w-[1180px]`}>
+    <section aria-labelledby="services-heading" className={`bg-[#DED8CD] ${sectionX} ${sectionY}`}>
+      <div className={sectionInner}>
         <Reveal>
           <Eyebrow>Ways to work together</Eyebrow>
           <h2 id="services-heading" className={`${h2Class} mt-5`}>
