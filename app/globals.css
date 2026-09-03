@@ -11,17 +11,17 @@
   --popover-foreground: #272620;
   --primary: #272620;
   --primary-foreground: #fff;
-  --secondary: #ece9e1;
+  --secondary: #ded8cd;
   --secondary-foreground: #272620;
   --muted: #efede7;
-  --muted-foreground: #6f6c63;
-  --accent: #b7573d;
+  --muted-foreground: #6e6a62;
+  --accent: #9d4936;
   --accent-foreground: #fff;
-  --destructive: #b42318;
-  --border: #d9d5cb;
-  --input: #d9d5cb;
-  --ring: #b7573d;
-  --radius: 0.4rem;
+  --destructive: #9d4936;
+  --border: #c9c4b9;
+  --input: #c9c4b9;
+  --ring: #9d4936;
+  --radius: 0.125rem;
 }
 
 @theme inline {
@@ -42,20 +42,19 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --font-sans: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
-  --font-serif: Georgia, serif;
-  --animate-soft-rise: soft-rise 0.75s both;
-  --animate-soft-rise-hero: soft-rise 0.9s 0.12s both;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.125rem;
+  --radius-lg: 0.125rem;
+  --radius-xl: 0.25rem;
+  --font-sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --animate-soft-rise: soft-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes soft-rise {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -63,12 +62,34 @@
   }
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-in {
+  animation: soft-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:focus-visible {
+  outline: 2px solid #9d4936;
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-in,
+  .animate-soft-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .motion-safe\:transition-transform {
+    transition: none;
   }
 }
