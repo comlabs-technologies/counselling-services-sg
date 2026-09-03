@@ -1,31 +1,38 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 
-import { WHATSAPP_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function CTA({
   children,
-  pale = false,
+  href = "#enquiry",
   className,
+  pale = false,
+  onClick,
 }: {
   children: ReactNode;
-  pale?: boolean;
+  href?: string;
   className?: string;
+  pale?: boolean;
+  onClick?: () => void;
 }) {
+  const external = href.startsWith("http");
+
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
+      onClick={onClick}
       className={cn(
-        "inline-flex min-h-[50px] items-center justify-center gap-[18px] border border-[#272620] bg-[#272620] px-[22px] text-[14px] text-white no-underline transition-all duration-[250ms] hover:gap-[26px] hover:border-[#b7573d] hover:bg-[#b7573d]",
-        pale && "border-[#f4eee2] bg-[#f4eee2] text-[#24231f]",
+        "inline-flex min-h-12 items-center justify-center gap-3 border px-[22px] text-[14px] no-underline transition-[gap,background-color,border-color,color] duration-200 ease-out hover:gap-4 focus-visible:outline-offset-4",
+        pale
+          ? "border-[#272620]/20 bg-transparent text-[#272620] hover:border-[#9D4936] hover:text-[#9D4936]"
+          : "border-[#272620] bg-[#272620] text-white hover:border-[#9D4936] hover:bg-[#9D4936]",
         className,
       )}
-      target="_blank"
-      rel="noreferrer"
+      {...(external ? { target: "_blank", rel: "noreferrer" } : undefined)}
     >
       {children}
-      <ArrowRight size={17} />
+      <ArrowRight size={16} aria-hidden="true" />
     </a>
   );
 }
